@@ -1,0 +1,21 @@
+# One command to run the whole agent:  docker compose up --build
+# Reads secrets from .env (optional — it runs offline with none set).
+services:
+  agent:
+    build:
+      context: .
+      args:
+        TENANT: ${TENANT:-ejentic}
+    ports:
+      - "${PORT:-4000}:4000"
+    env_file:
+      - .env
+    environment:
+      PORT: 4000
+    # Persist leads / chat logs / feedback / learned answers across restarts.
+    volumes:
+      - agent-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  agent-data:

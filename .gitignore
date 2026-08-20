@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment / secrets — NEVER commit real keys
+.env
+.env.local
+.env.*.local
+
+# Runtime data (local persistence: leads, chat logs, feedback, cache, KB index)
+data/
+*.db
+*.sqlite
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

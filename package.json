@@ -1,0 +1,29 @@
+{
+  "name": "ejentic-service-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Ejentic AI — reusable, self-contained multilingual customer-service agent prototype. One deployable unit: RAG grounding, escalation-on-unknown, feedback self-improvement, token-saving cache, and security hardening baked in. Onboard a new client by editing tenants/<client>/.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "ingest": "tsx scripts/ingest.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.10",
+    "@types/nodemailer": "^6.4.15",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  }
+}
