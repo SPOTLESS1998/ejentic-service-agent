@@ -158,3 +158,7 @@ when using a real embeddings provider to make the agent escalate more eagerly.
 
 _This is a prototype: for production, put it behind HTTPS + a WAF, and consider moving
 storage from JSON files to a managed database (the `storage.ts` seam makes this a drop-in change)._
+
+---
+
+Built by [Ejentic AI](https://ejentic.xyz) — AI agents and automation for businesses. Abuja, Nigeria.
